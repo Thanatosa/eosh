@@ -15,11 +15,13 @@ Install from disk onto storage device. 18.04 normal installation.<br>
 Use an encrypted installation with strong password to prevent tampering.<br>
 Let the Ubuntu updater run.<br>
 Open a command line terminal, ctrl+alt+t<br>
+```
        sudo apt install git<br>
        cd ~/<br>
        git clone https://github.com/thanatosa/eosh<br>
        chmod +x ~/eosh/install/Install.sh<br>
        ~/eosh/install/Install.sh<br>
+```
 This will take a while, about 75 mins and you might be asked to input password a few times<br>
 Double click desktop icon or click show applications icon in the bottom left and type eoshGUI and run the GUI<br>
 from the function menu select eosh: Quick Start Walkthrough<br>
