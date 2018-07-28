@@ -20,7 +20,7 @@ sed -i "s/$Original/$Replaced/g" ~/eos/plugins/net_plugin/net_plugin.cpp
 ## Build eosio code
 LogDir=~/eosh/logs
 cd ~/eos
-~/eos/eosio_build.sh -s EOS > $LogDir/Build.out.txt 2> $LogDir/Build.err.txt
+~/eos/eosio_build.sh -s EOS
 
 ## Copy executables
 mkdir -p ~/eosh/bin/cleos

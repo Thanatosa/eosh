@@ -8,13 +8,14 @@
 ## Install version control, compiler, secure RAM deletion and the QR code reader
 sudo apt install git
 sudo apt install gcc
+sudo apt install net-tools
 sudo apt install secure-delete
 sudo apt install qrencode
 
 ## Get and build the eosio code
 git clone https://github.com/EOSIO/eos --recursive
-cd ~/eos
-~/eos/eosio_build.sh -s EOS
+chmod +x ~/eosh/install/Build.sh
+~/eosh/install/Build.sh
 
 ## Disable network devices
 sudo cp /etc/network/interfaces /etc/network/interfaces.bak
@@ -46,11 +47,11 @@ sudo cp ~/eosh/icons/16x16.png $IconPath/16x16/apps/eoshGUI.png
 
 EoshDir="$(echo ~/eosh)"
 cp ~/eosh/install/eoshGUI.launcher ~/Desktop/eoshGUI.desktop
-chmod -c o+rwx ~/Desktop/eoshGUI.desktop
+chmod -c +x ~/Desktop/eoshGUI.desktop
 sudo sed -i "s;EOSH_PATH;$EoshDir;g" ~/Desktop/eoshGUI.desktop
 
 cp ~/eosh/install/eoshGUI.launcher ~/.local/share/applications/eoshGUI.desktop
-chmod -c o+rwx ~/.local/share/applications/eoshGUI.desktop
+chmod -c +x ~/.local/share/applications/eoshGUI.desktop
 sudo sed -i "s;EOSH_PATH;$EoshDir;g" ~/.local/share/applications/eoshGUI.desktop
 
 sudo chmod o+r $IconPath/256x256/apps/eoshGUI.png 
@@ -58,6 +59,8 @@ sudo chmod o+r $IconPath/128x128/apps/eoshGUI.png
 sudo chmod o+r $IconPath/64x64/apps/eoshGUI.png 
 
 sudo gtk-update-icon-cache $IconPath
+
+sudo chmod +x ~/eosh/*.sh
 
 ## Reboot
 echo "Reboot required to complete installation"
