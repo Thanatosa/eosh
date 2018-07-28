@@ -1,7 +1,7 @@
 # eosh
 A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
 
-<b>Required Equipment</b><br>
+<b>Required Hardware</b><br>
 64-bit processor<br>
 6 GB of RAM (might work with less)<br>
 A dedicated storage device, flash drive, HDD, SSD. At least 64 GB. Recommended 128 GB.<br>
