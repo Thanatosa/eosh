@@ -1,0 +1,5 @@
+A secure offline local wallet solution for eosio blockchains.
+
+Copyright(c) 2018 Thanatos
+t.me/Thanatosa
+

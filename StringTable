@@ -1,0 +1,142 @@
+#!/bin/bash
+
+################################
+## Copyright(c) 2018 Thanatos ##
+## t.me/Thanatosa             ##
+################################
+
+Invalid_Account_Name=$' is not a valid account name.\nIt must be 12 characters or less and include only a-z, 1-5 and .\n\n'
+Invalid_Number=$' is not a number.\n\n'
+Invalid_Token_Name=$' is not a valid token name.\nIt must be 7 characters or less and include only A-Z.\n\n'
+Invalid_Public_Key=$' is not a valid public key.\nIt must be 53 alphanumeric characters and begin with EOS.\n\n'
+Invliad_Transaction_ID=$' is not a valid transaction ID.\nIt must be 64 alphanumeric characters.\n\n'
+Invalid_Amount=$' is not a valid amount. It must be a number followed by a token name.\n\n'
+Invalid_Producer_Number=$' contains too many names. It must be 30 or less.\n\n'
+Invalid_Yes_or_No=$'Please select yes or no.\n\n'
+
+Local_Get_Blockchain_Information="Local: Get Blockchain Information"
+Local_Get_Block="Local: Get Block"
+Local_Get_Producers="Local: Get Producers"
+Local_Get_Account="Local: Get Account"
+Local_Get_Delegated_Bandwidth="Local: Get Delegated Bandwidth"
+Local_Get_Code="Local: Get Code"
+Local_Get_ABI="Local: Get ABI"
+Local_Get_Currency_Stats="Local: Get Currency Stats"
+Local_Get_Balance="Local: Get Balance"
+Local_Get_Accounts="Local: Get Accounts"
+Local_Get_Servants="Local: Get Servants"
+Local_Get_Transaction="Local: Get Transaction"
+Local_Get_Table="Local: Get Table"
+Local_Get_Actions="Local: Get Actions"
+Local_Get_Name_Bidding_Information="Local: Get Name Bidding Information"
+Local_Stop_Blockchain="Local: Stop Blockchain"
+Local_Start_Blockchain="Local: Start Blockchain"
+Local_Block_Monitor="Local: Block Monitor"
+Local_Delete_Blockchain="Local: Delete Blockchain"
+Transaction_New_Account="Transaction: New Account"
+Transaction_Register_Producer="Transaction: Register Producer"
+Transaction_Unregister_Producer="Transaction: Unregister Producer"
+Transaction_Vote_for_Producers="Transaction: Vote for Producers"
+Transaction_Vote_via_Proxy="Transaction: Vote via Proxy"
+Transaction_Delegate_Bandwidth="Transaction: Delegate Bandwidth"
+Transaction_Undelegate_Bandwidth="Transaction: Undelegate Bandwidth"
+Transaction_Bid_on_Name="Transaction: Bid on Name"
+Transaction_Buy_RAM="Transaction: Buy RAM"
+Transaction_Sell_RAM="Transaction: Sell RAM"
+Transaction_Claim_Producer_Awards="Transaction: Claim Producer Awards"
+Transaction_Register_Proxy="Transaction: Register Proxy"
+Transaction_Unregister_Proxy="Transaction: Unregister Proxy"
+Transaction_Transfer="Transaction: Transfer"
+Transaction_Open_Directory="Transaction: Open Directory"
+Wallet_Create="Wallet: Create"
+Wallet_Create_Key_Pair="Wallet: Create Key Pair"
+Wallet_Open_Directory="Wallet: Open Directory"
+System_Check_Network_Connection="System: Check Network Connection"
+System_Check_Swap_Disk="System: Check Swap Disk"
+System_Check_Process_Trace="System: Check Process Trace"
+System_Check_eosio_Code="System: Check eosio Code"
+System_Shutdown="System: Shutdown"
+eosh_Backup="eosh: Backup"
+eosh_Open_Log_Directory="eosh: Open Log Directory"
+eosh_About="eosh: About"
+eosh_Quick_Start_Walkthrough="eosh: Quick Start Walkthrough"
+eosh_License="eosh: License"
+eosh_Advanced_Mode="eosh: Advanced Mode"
+eosh_Basic_Mode="eosh: Basic Mode"
+eosh_Donate="eosh: Donate"
+
+Already_Running="Already running"
+Building_eosio_Code="Building eosio code"
+
+Main_Dialog_Exit="Exit"
+Main_Dialog_Select="Select"
+Main_Dialog_Text="Select Function"
+
+Entry_Expiration_in_Seconds="Expiration (in seconds)"
+Entry_Block_Number="Block Number"
+Entry_Account_Name="Account Name"
+Entry_Contract="Contract"
+Entry_Token="Token"
+Entry_Transaction_ID="Transaction ID"
+Entry_Scope="Scope"
+Entry_Table="Table"
+Entry_Public_Key="Public key"
+Entry_New_Name_Bidded_On="New name bidded on"
+Entry_Creator_Account="Creator Account"
+Entry_Delegated_for_Network_Bandwidth="Delegated for network bandwith (eg. 10.0000 EOS)"
+Entry_Delegated_for_CPU_Bandwidth="Delegated for CPU bandwith (eg. 10.0000 EOS)"
+Entry_Kilobytes_of_RAM_to_Buy="Kilobytes of RAM to buy"
+Entry_Transfer_Voting_and_Delegation_Rights="Transfer voting and delegation rights"
+Entry_New_Account_Name="New Account Name"
+Entry_Yes="Yes"
+Entry_No="No"
+Entry_Block_Producer_Account="Block Producer Account"
+Entry_Voting_Account="Voting Account"
+Entry_Producer_Names="Producer Names (up to 30, separated by spaces)"
+Entry_URL="URL"
+Entry_Location="Location"
+Entry_Proxy_Name="Proxy Name"
+Entry_Account_to_Delegate_From="Account to delegate from"
+Entry_Account_to_Delegate_To="Account to delegate to"
+Entry_Account_to_Delegate_for_Network="Amount to delegate for network (eg. 10.0000 EOS)"
+Entry_Account_to_Delegate_for_CPU="Amount to delegate for CPU (eg. 10.0000 EOS)"
+Entry_Account_Undelegating="Account undelegating"
+Entry_Account_to_Undelegate_From="Account to undelegate from"
+Entry_Account_to_Undelegate_for_Network="Amount to delegate for network (eg. 10.0000 EOS)"
+Entry_Account_to_Undelegate_for_CPU="Amount to delegate for CPU (eg. 10.0000 EOS)"
+Entry_Bidding_Account="Bidding Account"
+Entry_Name_to_Bid_On="Name to bid on"
+Entry_Ammount_to_Bid="Amount to bid (eg. 10.0000 EOS)"
+Entry_Buyer_Account="Buyer Account"
+Entry_Receiver_Account="Receiver Account"
+Entry_Amount_to_pay="Amount to pay (eg. 10.0000 EOS)"
+Entry_Seller_Account="Seller Account"
+Entry_Bytes_to_Sell="Bytes to sell"
+Entry_Transfer_from_Account="Transfer from account"
+Entry_Transfer_to_Account="Transfer to account"
+Entry_Amount_to_Transfer="Amount to transfer (eg. 10.0000 EOS)"
+Entry_Memo="Memo"
+
+Dialog_Delete_Blockchain='Are you sure that you want\nto delete the local blockchain?'
+Dialog_Failed_to_Retrieve_Public_Key=$'Failed to retrieve public key for account'
+Dialog_Does_the_Password_Unlock_the_Wallet=$'\nDoes the password unlock the wallet?'
+Dialog_Power_Mode="Power mode"
+Dialog_Power_Off="Power off"
+Dialog_Reboot="Reboot"
+Dialog_Erase_RAM_Mode="Erase RAM mode"
+Dialog_Fast="Fast"
+Dialog_Secure="Secure"
+Dialog_Transaction_Failed="Transation Failed"
+Dialog_Select_Chain_to_Broadcast_On="Select chain to broadcast on"
+Dialog_Local="Local"
+Dialog_Mainnet="Mainnet"
+Dialog_Chain_Not_Running="Local blockchain not running"
+Dialog_Mainnet_Reference_Block="Mainnet reference block"
+
+
+Block_Monitor_Block="Block"
+
+Start_Chain_Launching_New_Chain="Launching new blockchain"
+Start_Chain_Replaying_Chain="Replaying chain"
+
+

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+################################
+## Copyright(c) 2018 Thanatos ##
+## t.me/Thanatosa             ##
+################################
+
+GeneralOptions="--title=eosh --class=eosh --icon-name=eoshGUI --window-icon=icons/256x256.png"
+
+TransactionDir=~/eosh/transactions
+LogDir=~/eosh/logs
+WalletDir=~/eosio-wallet
+CleosDir=~/eosh/bin/cleos
+NodeosDir=~/eosh/bin/nodeos
+BackupDir=~/eosh/backup
+ContractDir=~/eosh/contracts
+
+Eosio=eosio
+ProducerName=soloproducer

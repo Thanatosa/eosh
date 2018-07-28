@@ -1,0 +1,73 @@
+# Basic mode
+Local: Block Monitor
+Local: Stop Blockchain 
+Local: Start Blockchain
+Local: Delete Blockchain
+Local: Start Blockchain
+Wallet: Create Key Pair 
+Wallet: Create | dummyaccount
+Wallet: Open Directory
+Transaction: New Account 99 | eosio | 10.0 EOS | 10.0 EOS | 8 | yes | dummyaccount
+Local: Get Account | dummyaccount
+Transaction: Transfer 99 | eosio | dummyaccount | 10.0000 EOS | init
+Local: Get Account | dummyaccount
+Local: Get Balance | eosio.token | dummyaccount | EOS
+Transaction: Undelegate Bandwidth | 99 | dummyaccount | dummyaccount | 5.0 EOS | 5.0 EOS
+Local: Get Delegated Bandwidth
+Local: Get Account | dummyaccount
+Transaction: Delegate Bandwidth | 99 | dummyaccount | dummyaccount | 4.9999 EOS | 4.9999 EOS
+Local: Get Delegated Bandwidth
+Transaction: Open Directory
+Transaction: Buy RAM | 99 | dummyaccount | dummyaccount | 1.0 EOS
+Local: Get Account | dummyaccount
+Transaction: Sell RAM | 99 | dummyaccount | 50000
+Local: Get Account | dummyaccount
+Transaction: Register Proxy | 99 | dummyaccount
+Wallet: Create Key Pair 
+Wallet: Create | voteraccount
+Transaction: New Account 99 | eosio | 10.0 EOS | 10.0 EOS | 8 | yes | voteraccount
+Local: Get Account | voteraccount
+Transaction: Vote via Proxy | 99 | voteraccount | dummyaccount
+Local: Get Account | voteraccount
+Transaction: Unregister Proxy | 99 | dummyaccount
+Transaction: Bid on Name | 99 | dummyaccount | com | 1.0 EOS
+Local: Get Name Bidding Information | com
+Transaction: Vote for Producers 99 | dummyaccount | soloproducer
+Local: Get Account | dummyaccount
+Local: Get Accounts | EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
+Local: Get Account > [ copy public key ]
+Local: Get Accounts | [ the public key we created dummyaccount with with ]
+eosh: Backup
+eosh: About
+eosh: License
+eosh: Donate
+System: Shutdown | reboot | fast
+
+# Mainnet broadcast
+Wallet: Create [mainnet account name, mainnet private key]
+Smartphone: Visit https://thanatosa.github.io/eosh/ [get block data]
+Transaction: Undelegate Bandwidth [broadcast on mainnet, use block data]
+Smartphone: Scan QR code with any QR code reader and copy text and broacast transaction on webpage
+
+# Advanced mode
+Local: Block Monitor
+System: Advanced Mode
+Local: Get Blockchain Information
+Local: Get Block | 1
+Local: Get Producers
+Local: Get Code | eosio
+Local: Get ABI | eosio
+Local: Get Currency Stats | eosio.token | EOS
+System: Check Network Connection
+System: Check Swap Disk
+System: Check Process Trace
+Transaction: Register Producer 99 | dummyaccount | www.dummyaccount.com | 0
+Local: Get Producers
+Transaction: Claim Producer Awards 99 | soloproducer
+Local: Get Account | soloproducer
+Transaction: Unregister Producer | dummyaccount
+Local: Get Producers
+Local: Get Table | eosio | eosio | producers
+Local: Get Table | eosio | eosio | global
+System: Check eosio Code
+

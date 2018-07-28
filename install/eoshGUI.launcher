@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Exec=EOSH_PATH/eoshGUI.sh
+Icon=eoshGUI
+Terminal=true
+Name=eoshGUI
+GenericName=eoshGUI
+Comment=Run eoshGUI
+Encoding=UTF-8
+Terminal=false
+Type=Application
+Categories=Application
+
+Name=eoshGUI
