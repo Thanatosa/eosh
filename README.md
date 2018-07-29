@@ -1,5 +1,4 @@
-  - ![](https://github.com/Thanatosa/eosh/blob/master/icons/256x256.png | width=100)
-
+<img src="https://github.com/Thanatosa/eosh/blob/master/icons/256x256.png" width=128 height=128/>
 
 A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
 
