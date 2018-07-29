@@ -1,4 +1,4 @@
-<h1>eosh</h1>
+#eosh
 A secure, local, offline, hardware wallet solution for eosio blockchains.
 
 
