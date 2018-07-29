@@ -4,8 +4,7 @@
 
 
 # eosh
----
-###### A secure, local, offline, hardware wallet solution for eosio blockchains.
+#### A secure, local, offline, hardware wallet solution for eosio blockchains.
 ---
 
 <b>Features</b>
