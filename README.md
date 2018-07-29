@@ -2,7 +2,7 @@
 <h1>eosh</h1>
 A secure, local, offline, hardware wallet solution for eosio blockchains.
 
-<b>Features</b>
+**Features**
 * Free
 * Minimal dependencies
    * Ubuntu installation and repository
