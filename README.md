@@ -1,6 +1,3 @@
-[logo]: https://github.com/Thanatosa/eosh/blob/master/icons/64x64.png "eosh"
-![alt text][logo] <h1>eosh</h1>
-
   - ![](https://github.com/Thanatosa/eosh/blob/master/icons/256x256.png | width=100)
 
 
