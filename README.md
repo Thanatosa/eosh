@@ -32,20 +32,27 @@ A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
   * Interact with eosio code directly
   * Use eosh code as example code
 
-<b>Required Hardware</b><br>
-64-bit processor<br>
-6 GB of RAM (might work with less)<br>
-A dedicated storage device, flash drive, HDD, SSD. At least 64 GB. Recommended 128 GB.<br>
-DVD Writer<br>
-Writable DVD<br>
-Any smartphone with camera<br>
+<b>Required Hardware</b>
+* 64-bit processor.
+* 6 GB of RAM (might work with less)
+* A dedicated storage device, flash drive, HDD, SSD.
+   * At least 64 GB. Recommended 128 GB.
+* DVD Writer.
+* Writable DVD.
+* Any smartphone with camera.
 
-<b>Instructions</b><br>
-Download Ubuntu 18.04 iso and burn to disk. http://releases.ubuntu.com/18.04/. The 64-bit PC (AMD64) desktop image, is the image for AMD and Intel processors.<br>
-Install from disk onto storage device. 18.04 normal installation.<br>
-Use an encrypted installation with strong password to prevent tampering.<br>
-Let the Ubuntu updater run.<br>
-Open a command line terminal, ctrl+alt+t<br>
+<b>Instructions</b>
+* Download Ubuntu 18.04
+   * http://releases.ubuntu.com/18.04/.
+   * The 64-bit PC (AMD64) desktop image, is the image for AMD and Intel processors.
+   * Burn iso image to disk.
+* Install from disk onto storage device.
+   * 18.04 normal installation.
+   * Use an encrypted installation with strong password.
+* Let the Ubuntu updater run.
+* Open a command line terminal
+   * ctrl+alt+t
+   * Type the following commands:
 ```
        sudo apt install git
        cd ~/
@@ -53,9 +60,14 @@ Open a command line terminal, ctrl+alt+t<br>
        chmod +x ~/eosh/install/Install.sh
        ~/eosh/install/Install.sh
 ```
-This will take a while, about 75 mins and you might be asked to input password a few times<br>
-Double click desktop icon or click show applications icon in the bottom left and type eoshGUI and run the GUI<br>
-from the function menu select eosh: Quick Start Walkthrough<br>
-<br>
-<b>Broadcast transaction page</b><br>
-https://thanatosa.github.io/eosh/<br>
+   * This will take a while, about 75 mins.
+   * You might be asked to input your password a few times
+   * Double click desktop icon or click show applications icon in the bottom left and type eoshGUI to run the GUI
+   * From the function menu select eosh: Quick Start Walkthrough
+   
+<b>Broadcast transaction to mainnet</b>
+* Visit https://thanatosa.github.io/eosh/
+* Get reference block data from an block producer endpoint of your choice.
+* Use any QR code reader to scan the given QR code from your offline installation.
+* Copy and paste text.
+* Broadcast securely using https directy to a block producer endpoint of your choice.
