@@ -66,7 +66,7 @@ A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
    * From the function menu select eosh: Quick Start Walkthrough.
    
 <b>Broadcast transaction to mainnet</b>
-* Visit https://thanatosa.github.io/eosh/
+* Via smartphone Visit https://thanatosa.github.io/eosh/
 * Get reference block data from a block producer endpoint of your choice.
 * Use any QR code reader to scan the given QR code from your offline installation.
 * Copy and paste text.
