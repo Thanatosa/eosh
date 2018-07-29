@@ -4,33 +4,33 @@ A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
 <b>Features</b>
 * Free
 * Minimal dependencies
- * Ubuntu installation and repository
- * eosio code
+   * Ubuntu installation and repository
+  * eosio code
 * Disabled attack vectors
- * Encrypted installation
- * No network connections
- * No swap disk
- * No process trace
- * Erased RAM
+  * Encrypted installation
+  * No network connections
+  * No swap disk
+  * No process trace
+  * Erased RAM
 * Written entirely in bash
- * Ubuntu native command line script
- * Required for interaction with eosio code
- * Open source code
+  * Ubuntu native command line script
+  * Required for interaction with eosio code
+  * Open source code
 * Local blockchain 
- * Test transactions first
- * Test smart contracts
+  * Test transactions first
+  * Test smart contracts
 * QR code transaction
- * Generated offline and locally on dedicated device
- * Transmitted through webpage with no external source
- * https straight to a choice of block producer endpoints
+  * Generated offline and locally on dedicated device
+  * Transmitted through webpage with no external source
+  * https straight to a choice of block producer endpoints
 * Fast access to new features
- * Updated system contracts
- * Any smart contract
+  * Updated system contracts
+  * Any smart contract
 * Layered use cases
- * Interact via eoshGUI
- * Interact with eosh scripts
- * Interact with eosio code directly
- * Use eosh code as example code
+  * Interact via eoshGUI
+  * Interact with eosh scripts
+  * Interact with eosio code directly
+  * Use eosh code as example code
 
 <b>Required Hardware</b><br>
 64-bit processor<br>
