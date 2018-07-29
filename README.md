@@ -4,7 +4,7 @@ A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
 <b>Features</b>
 * Free
 * Minimal dependencies
- * Ubuntu installation and repository
+..* Ubuntu installation and repository
  * eosio code
 * Disabled attack vectors
  * Encrypted installation
