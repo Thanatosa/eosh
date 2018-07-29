@@ -34,7 +34,7 @@ A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
 
 <b>Required Hardware</b>
 * 64-bit processor.
-* 6 GB of RAM (might work with less)
+* 6 GB of RAM (might work with less).
 * A dedicated storage device, flash drive, HDD, SSD.
    * At least 64 GB. Recommended 128 GB.
 * DVD Writer.
