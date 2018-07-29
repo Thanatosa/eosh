@@ -1,3 +1,5 @@
+[logo]: https://github.com/Thanatosa/eosh/icons/64x64.png "eosh"
+
 # eosh
 A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
 
