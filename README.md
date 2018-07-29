@@ -72,3 +72,6 @@ A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
 * Use any QR code reader to scan the given QR code from your offline installation.
 * Copy and paste text.
 * Broadcast securely using https directy to a block producer endpoint of your choice.
+
+<b>Telegram Group</b>
+t.me/eoshwallet
