@@ -1,5 +1,5 @@
 <dl>
-<img src="https://github.com/Thanatosa/eosh/blob/master/icons/256x256.png" width=64 height=64 />
+<dt><img src="https://github.com/Thanatosa/eosh/blob/master/icons/256x256.png" width=64 height=64 /></dt>
 </dl>
 <h1>eosh</h1>
 -----------
