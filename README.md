@@ -2,7 +2,7 @@
 <h1>eosh</h1>
 <br>
 <b>A secure, local, offline, hardware wallet solution for eosio blockchains.</b>
-
+<br>
 <b>Required Hardware</b>
 * Free
 * Minimal dependencies
