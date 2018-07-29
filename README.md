@@ -1,4 +1,4 @@
-<img src="https://github.com/Thanatosa/eosh/blob/master/icons/256x256.png" width=64 height=64/>
+<img src="https://github.com/Thanatosa/eosh/blob/master/icons/256x256.png" width=64 height=64 />
 <h1>eosh</h1>
 A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
 <br>
