@@ -60,7 +60,7 @@ A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
        chmod +x ~/eosh/install/Install.sh
        ~/eosh/install/Install.sh
 ```
-   * This will take a while, about 75 mins.
+   * This will take about 75 mins.
    * You might be asked to input your password a few times
    * Double click desktop icon or click show applications icon in the bottom left and type eoshGUI to run the GUI
    * From the function menu select eosh: Quick Start Walkthrough
