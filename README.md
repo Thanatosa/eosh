@@ -5,7 +5,7 @@
 #### A secure, local, offline, hardware wallet solution for eosio blockchains.
 ---
 
-<b>Features</b>
+#### Features
 * Free
 * Minimal dependencies
    * Ubuntu installation and repository
@@ -36,7 +36,7 @@
   * Interact with eosio code directly
   * Use eosh code as example code
 
-<b>Required Hardware</b>
+#### Required Hardware
 * 64-bit processor.
 * 6 GB of RAM (might work with less).
 * A dedicated storage device, flash drive, HDD, SSD.
@@ -46,7 +46,7 @@
 * Writable DVD.
 * Any smartphone with camera.
 
-<b>Instructions</b>
+#### Instructions
 * Download Ubuntu 18.04
    * http://releases.ubuntu.com/18.04/.
    * The 64-bit PC (AMD64) desktop image, is the image for AMD and Intel processors.
@@ -70,12 +70,12 @@
    * Double click the desktop icon or click show applications icon in the bottom left and type eoshGUI to run the GUI.
    * From the function menu select eosh: Quick Start Walkthrough.
    
-<b>Broadcast transaction to mainnet</b>
+#### Broadcast transaction to mainnet</b>
 * Via smartphone visit https://thanatosa.github.io/eosh/
 * Get reference block data from a block producer endpoint of your choice.
 * Use any QR code reader to scan the given QR code from your offline installation.
 * Copy and paste text.
 * Broadcast securely using https directy to a block producer endpoint of your choice.
 
-<b>Telegram Group</b>
+#### Telegram Group
 * t.me/eoshwallet
