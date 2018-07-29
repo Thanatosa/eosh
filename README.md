@@ -74,4 +74,4 @@ A secure, local, offline, hardware wallet solution for eosio blockchains.<br>
 * Broadcast securely using https directy to a block producer endpoint of your choice.
 
 <b>Telegram Group</b>
-t.me/eoshwallet
+* t.me/eoshwallet
