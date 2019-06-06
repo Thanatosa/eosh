@@ -71,7 +71,8 @@
    * From the function menu select eosh: Quick Start Walkthrough.
    
 #### Broadcast transaction to mainnet</b>
-* Via smartphone visit https://thanatosa.github.io/eosh/
+* for EOS mainnet, Via smartphone visit https://thanatosa.github.io/eosh/
+* for Telos mainnet, Via smartphone visit https://thanatosa.github.io/eosh/telosbroadcast.html
 * Get reference block data from a block producer endpoint of your choice.
 * Use any QR code reader to scan the given QR code from your offline installation.
 * Copy and paste text.
