@@ -1,0 +1,95 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="icons/64x64.png" />
+  
+  <script>
+    function select_endpoint()
+    {
+      document.getElementById('ref_block_num').innerHTML = "ref_block_num: " 
+      document.getElementById('ref_block_prefix').innerHTML = "ref_block_prefix: " 
+      let api_endpoint = document.getElementById('api_endpoint').value;
+      let chain_info = new XMLHttpRequest();
+      chain_info.open('GET', api_endpoint+"v1/chain/get_info", true);
+      chain_info.responseType = 'json';
+      chain_info.onload = function()
+      {
+        if (this.status === 200)
+        {
+          document.getElementById('ref_block_num').innerHTML = "ref_block_num: " + this.response.last_irreversible_block_num;
+          var last_irreverisble_block = new XMLHttpRequest();
+          last_irreverisble_block.open('POST', api_endpoint+"v1/chain/get_block", true);
+          last_irreverisble_block.responseType = 'json';
+          last_irreverisble_block.onreadystatechange = function()
+          {
+            if(this.readyState == XMLHttpRequest.DONE && this.status == 200)
+            {
+              document.getElementById('ref_block_prefix').innerHTML = "ref_block_prefix: " + this.response.ref_block_prefix;
+            }
+          }
+          last_irreverisble_block.onerror = function()
+          {
+            alert("error");
+          }
+          let inputdata='{"block_num_or_id": ' + this.response.last_irreversible_block_num + '}'
+          last_irreverisble_block.send(inputdata);
+        }
+        else
+        {
+          alert("Error: " + this.status);
+        }
+      };
+      chain_info.send('');
+    };
+    function broadcast_transaction()
+    {
+      document.getElementById('json').innerHTML = "";
+      document.getElementById('response').innerHTML = "";
+      let api_endpoint = document.getElementById('api_endpoint').value;
+      var push_transaction = new XMLHttpRequest();
+      push_transaction.open('POST', api_endpoint+"v1/chain/push_transaction", true);
+      push_transaction.responseType = 'json';
+      push_transaction.onreadystatechange = function()
+      {
+        json_response = JSON.stringify(this.response, null, 2);
+        document.getElementById('response').innerHTML = "Response from " + api_endpoint + " (" + this.readyState + ", " + this.status + ")\n\n" + json_response;
+      }
+      let transaction = document.getElementById('transaction').value;
+      let json_transaction = JSON.parse(transaction);
+      push_transaction.send(transaction);
+      json_transaction = JSON.stringify(json_transaction, null, 2);
+      document.getElementById('json').innerHTML = "Sending to " + api_endpoint + "\n \n" + json_transaction;
+    };
+  </script>
+</head>
+
+<body>
+  <body bgcolor="#C0C0C0"> 
+  <a href="https://github.com/Thanatosa/eosh">
+    <img src="icons/64x64.png">
+  </a>
+  <h1>TLEOS mainnet transaction broadcast</h1>
+  <form action="javascript:select_endpoint()">
+    API endpoint 
+    <select id="api_endpoint" required>
+      <option value="https://api.telosvenezuela.com/">tlsvenezuela</option>
+      <option value="https://api.theteloscope.io/">theteloscope</option>
+      <option value="https://api.eos.miami/">telosmiamibp</option>      
+      <option value="https://api.telos.telosgreen.com/">telosgreenbp</option>      
+      <option value="https://api.telos-21zephyr.com/">21zephyr1111</option>
+    </select>
+    <br>
+    <p id="ref_block_num">ref_block_num: </p>
+    <p id="ref_block_prefix">ref_block_prefix: </p>
+    <input type="submit" value="get block">
+  </form>
+  <form action="javascript:broadcast_transaction()">
+    <textarea id="transaction" style="width: 320px; height: 240px;" placeholder="paste transaction here" required></textarea>
+    <br/>
+    <input type="submit" value="Broadcast">
+  </form>
+  <pre id="json"></pre>
+  <pre id="response"></pre>
+  <br/>
+</body>
+</html>
